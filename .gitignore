@@ -1,1 +1,3 @@
-/src/main/CoreToPaper.iml
+/.gradle/
+/build/
+/target/
