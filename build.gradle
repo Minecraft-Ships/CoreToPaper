@@ -17,18 +17,6 @@ repositories {
     }
 }
 
-jar {
-    dependsOn(':CoreToBukkit:jar')
-    from {
-        configurations.runtimeClasspath.collect {
-            if (it.path.contains(".m2")) {
-                return
-            }
-            return it.isDirectory() ? it : zipTree(it)
-        }
-    }
-}
-
 dependencies {
     implementation project(":CoreToBukkit")
     implementation project(":ShipsCore")
